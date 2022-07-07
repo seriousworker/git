@@ -1,10 +1,21 @@
-function validateUsr(username) {
-    if (username.length >= 4 && username.length <= 16) {
-        let value = /^[a-z0-9_]+$/.exec(username);
-        let res = !!value ? username : null;
-        return res;
-    } else return false;
+const rps = (p1, p2) => { return p1 == 'rock' && p2 == 'scissors' ? 
+                            1 : p1 == 'rock' && p2 == 'paper' ?  
+                            2 : p1 == 'scissors' && p2 == 'rock' ? 
+                            2 : p1 == 'scissors' && p2 == 'paper' ?
+                            1 : p1 == 'paper' && p2 == 'scissors' ?
+                            2 : p1 == 'paper' && p2 == 'rock' ?
+                            1 : 'Draw!';
+                        };
+
+function whoWon(n) {
+    alert(`Player ${n} won!`);
 }
 
-alert(validateUsr('p1pp1'));
-alert(validateUsr('DS3@DFx'));
+whoWon(rps('rock', 'scissors'));
+whoWon(rps('scissors', 'paper'));
+whoWon(rps('paper', 'rock'));
+
+whoWon(rps('scissors', 'rock'));
+whoWon(rps('paper', 'scissors'));
+
+whoWon(rps('rock', 'rock'));
