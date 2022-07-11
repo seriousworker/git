@@ -1,7 +1,7 @@
 function intRac(n, guess) {
     let trying = 0;
   
-    for (;;) {
+    for (;;) 
       trying++;
       
       let guesBeg = Math.floor((guess + Math.floor(n / guess)) / 2);
